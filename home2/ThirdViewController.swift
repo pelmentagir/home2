@@ -1,8 +1,8 @@
 //
 //  ThirdViewController.swift
-//  HomeWork
+//  home2
 //
-//  Created by Данил Забинский on 02.07.2024.
+//  Created by Тагир Файрушин on 03.07.2024.
 //
 
 import UIKit
@@ -12,39 +12,10 @@ class ThirdViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        
+        // Do any additional setup after loading the view.
     }
     
-    @IBOutlet weak var firstField: UITextField!
-    
-    @IBOutlet weak var secField: UITextField!
-    
-    
-    @IBOutlet weak var button: UIButton!
-    
-    
-    @IBAction func buttonTapped(_ sender: Any) {
-        if let text1 = firstField.text, let text2 = secField.text {
-            print(text1)
-            print(text2)
-            // вернуть
-            performSegue(withIdentifier: "ViewController", sender: self)
-        } else {
-            showAlert(title: "Ошибка", message: "Заполните поля")
-        }
-        
-        func showAlert(title: String, message: String) {
-            let alertController = UIAlertController(title: title, message: message, preferredStyle:.alert)
-            alertController.addAction(UIAlertAction(title: "OK", style:.default))
-            present(alertController, animated: true)
-        }
-        
-        func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-            if segue.identifier == "thirdViewCOntroller" {
-                
-            }
-        }
-    }
+
     /*
     // MARK: - Navigation
 
