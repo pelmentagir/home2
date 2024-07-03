@@ -16,8 +16,8 @@ class ViewController: UIViewController {
     
     @IBOutlet weak var button: UIButton!
     
-    let adminLogin: String = "admin"
-    let adminPassword: String = "admin"
+    let login: String = "admin"
+    let password: String = "admin"
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -27,7 +27,7 @@ class ViewController: UIViewController {
     @IBAction func myButtonTapped(_ sender: Any) {
   
         if let text1 = firstField.text, let text2 = secondField.text {
-            if text1 == adminLogin && text2 == adminPassword {
+            if text1 == login && text2 == password {
                     performSegue(withIdentifier: "SecondViewController", sender: self)
             } else {
                 showAlert(title: "Ошибка", message: "Неверный логин")
